@@ -1,10 +1,11 @@
-import {pool} from './queries.js';
+import {pool} from './database.js';
 import {Request,Response} from 'express';
 
-class CustomerController{
-public async getCustomers(req: Request,res: Response)
+class RolesController{
+
+    public async getRoles(req: Request,res: Response)
     {
-        pool.query('SELECT name from customer ORDER BY id ASC',(err,result)=>
+        pool.query('SELECT name from roles ORDER BY key ASC',(err,result)=>
         {
             if(err)
             {
@@ -16,10 +17,11 @@ public async getCustomers(req: Request,res: Response)
             }
         })
     }
-    public async getCustomerIdByName(req:Request,res:Response)
+
+    public async getRoleKeyByName(req:Request,res:Response)
     {
-        const customerName = req.params.name;
-        pool.query('SELECT id FROM customer WHERE name = $1',[customerName],(err,result)=>
+        const roleName = req.params.name;
+        pool.query('SELECT key FROM roles WHERE name = $1',[roleName],(err,result)=>
         {
             if(err)
             {
@@ -34,5 +36,4 @@ public async getCustomers(req: Request,res: Response)
 
 }
 
-
-export const customer = new CustomerController();
+export const roleController = new RolesController();

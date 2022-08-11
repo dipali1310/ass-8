@@ -1,7 +1,7 @@
 import e, {Request,response,Response} from 'express';
 import fs from 'fs/promises';
 import {User} from '../public/user';
-import {pool} from './queries.js';
+import {pool} from './database.js';
 
 class controller {
 
