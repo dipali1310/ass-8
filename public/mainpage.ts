@@ -1,6 +1,6 @@
-import {UserCRUD} from "./UserCRUD.js";
+import {UserCRUD} from "./Usercrud.js";
 
-import {ImainPage} from "./mainButtonsInterface.js";
+import {ImainPage} from "./mainbuttonsinterface.js";
  
 const DateTimeFormatter = 
     (target:Object, methodName: string, descriptor: PropertyDescriptor) => 

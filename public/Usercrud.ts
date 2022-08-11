@@ -1,6 +1,6 @@
-import {CRUD} from "./crudInterface.js"; 
+import {CRUD} from "./crudinterface.js"; 
 import { User} from "./user.js";
-import { findIndexByID, getCustomerIdByName, getCustomerList, getRoleKey, getRoleList } from "./findOperations.js";
+import { findIndexByID, getCustomerIdByName, getCustomerList, getRoleKey, getRoleList } from "./findoperations.js";
 import { selectDropdown } from "./utils.js";
 
 export class UserCRUD implements CRUD <User> 
